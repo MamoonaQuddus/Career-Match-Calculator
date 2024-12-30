@@ -22,7 +22,7 @@ body {
 #content-box {
     width: 400%;
     max-width: 400px;
-    height: 500px;
+    height: 520px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     margin: 0 auto;
@@ -84,24 +84,17 @@ input[type="text"]:focus {
     transform: translateY(0);
 }
 /* Result message styling */
-h2 {
-    margin-top: 20px;
-    font-size: 1.2rem;
+#result-message{
+    margin-top: 10px;
+    font-size: 1rem;
     color: #ff8c00;
     transition: opacity 0.3s ease;
-}
-
-#result-message {
-    opacity: 0;
-}
-
-#result-message.show {
-    opacity: 1;
 }
 
 #result-percentage {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 20px;
     color: #ff8c00;
 }
+

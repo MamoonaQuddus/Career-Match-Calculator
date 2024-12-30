@@ -9,8 +9,13 @@ function calculateCareer(){
      
     if (yourName != "" && friendName != "") {
         let percentage = Math.floor(Math.random() * 101); //0-.99999
-        document.getElementById("result-message").innerText = yourName + " and " + friendName + "'s chances of making a great startup duo in tech!:";
-        document.getElementById("result-percentage").innerText = percentage.toString() + "%";
+        document.getElementById("result-message").innerText = `${yourName} and ${friendName}'s chances of making a great startup duo in tech!`;
+        document.getElementById("result-percentage").innerText = `${percentage}%`;
+
+      
+    }
+    else {
+        alert("Please enter both names!");
     }
         
         
