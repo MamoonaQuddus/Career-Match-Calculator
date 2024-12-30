@@ -83,24 +83,72 @@ input[type="text"]:focus {
 #calculate:active {
     transform: translateY(0);
 }
-#result-container {
-    display: flex;
-    align-items: center; /* Vertically aligns items */
-    gap: 10px; /* Adds spacing between elements */
-}
- 
-/* Result message styling */
-#result-message{
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #ff8c00;
-    transition: opacity 0.3s ease;
+/* Popup Background */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-#result-percentage {
+/* Popup Content */
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    animation: popup-show 0.5s ease-out;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 20px;
-    color: #ff8c00;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
 }
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Popup Message Styling */
+#popup-message {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#popup-percentage {
+    font-size: 1.4rem;
+    color: #ff5722;
+    font-weight: bold;
+}
+
+/* Popup Show Animation */
+@keyframes popup-show {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+ 
 
