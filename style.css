@@ -83,6 +83,12 @@ input[type="text"]:focus {
 #calculate:active {
     transform: translateY(0);
 }
+#result-container {
+    display: flex;
+    align-items: center; /* Vertically aligns items */
+    gap: 10px; /* Adds spacing between elements */
+}
+ 
 /* Result message styling */
 #result-message{
     margin-top: 10px;
